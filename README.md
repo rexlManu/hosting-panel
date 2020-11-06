@@ -12,4 +12,4 @@ Was jedoch weiterhin untersagt ist, ist der Verkauf dieses
 Panels.
 
 Bei Fragen, Problemen oder Anregungen kann man mich
-auf Twitter erreichen: @saveoriginal
+auf Twitter erreichen: https://twitter.com/saveoriginal
