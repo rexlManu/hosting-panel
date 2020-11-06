@@ -1,0 +1,53 @@
+<IfModule mod_rewrite.c>
+
+    RewriteEngine on
+    RewriteBase /
+
+	#auth
+	RewriteRule ^login?$ index.php?page=auth_login [L]
+	RewriteRule ^register?$ index.php?page=auth_register [L]
+	RewriteRule ^logout?$ index.php?page=auth_logout [L]
+	RewriteRule ^activate/([A-Za-z0-9-]+)?$ index.php?page=auth_activate&key=$1 [NC,L]
+	RewriteRule ^passwort_reset?$ index.php?page=auth_forgot_password [L]
+    RewriteRule ^passwort_reset/([A-Za-z0-9-]+)?$ index.php?page=auth_forgot_password&key=$1 [NC,L]
+
+	#index
+	RewriteRule ^/?$ index.php?page=main_page [L]
+    RewriteRule ^dashboard?$ index.php?page=dashboard [L]
+    RewriteRule ^status?$ index.php?page=status [L]
+    RewriteRule ^profile?$ index.php?page=profile [L]
+
+    #bot
+    RewriteRule ^bot/order?$ index.php?page=bot_order [L]
+    RewriteRule ^bot/manage/([A-Za-z0-9-]+)?$ index.php?page=bot&id=$1 [NC,L]
+
+    #webspace
+    RewriteRule ^webspace/order?$ index.php?page=webspace_order [L]
+    RewriteRule ^webspace/manage/([A-Za-z0-9-]+)?$ index.php?page=webspace_manage&id=$1 [NC,L]
+    RewriteRule ^webspace/renew/([A-Za-z0-9-]+)?$ index.php?page=webspace_renew&id=$1 [NC,L]
+
+    #rechtliches
+    RewriteRule ^impressum?$ index.php?page=impressum [L]
+    RewriteRule ^datenschutz?$ index.php?page=datenschutz [L]
+    RewriteRule ^agb?$ index.php?page=agb [L]
+
+    #support
+    RewriteRule ^tickets?$ index.php?page=tickets [L]
+    RewriteRule ^ticket/([A-Za-z0-9-]+)?$ index.php?page=ticket&id=$1 [NC,L]
+
+    #team
+    RewriteRule ^team/tickets?$ index.php?page=team_tickets [L]
+    RewriteRule ^team/ticket/([A-Za-z0-9-]+)?$ index.php?page=team_ticket&id=$1 [NC,L]
+    RewriteRule ^team/users?$ index.php?page=team_users [L]
+    RewriteRule ^team/user/([A-Za-z0-9-]+)?$ index.php?page=team_user&id=$1 [NC,L]
+    RewriteRule ^team/webspaces?$ index.php?page=team_webspaces [L]
+    RewriteRule ^team/bots?$ index.php?page=team_bots [L]
+    RewriteRule ^team/bot/([A-Za-z0-9-]+)?$ index.php?page=team_bot&id=$1 [NC,L]
+    RewriteRule ^team/nodes?$ index.php?page=team_nodes [L]
+    RewriteRule ^team/node/([A-Za-z0-9-]+)?$ index.php?page=team_node&id=$1 [NC,L]
+
+</IfModule>
+<Files 403.shtml>
+    order allow,deny
+    allow from all
+</Files>
