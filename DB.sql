@@ -212,7 +212,7 @@ CREATE TABLE `webspace_host` (
 --
 
 INSERT INTO `webspace_host` (`id`, `domainName`, `ip`, `name`, `password`, `created_at`, `updated_at`) VALUES
-(1, 'startyournode.web.space', '193.70.68.138', 'web_reseller01_startyournode', 'aXzaC5O2KjdtKmlWSJTE52MjSUrf7v2bPWCJU5qj2iljEy8JetSvuCWfeSEgiDYJhKgZhMzL9WzHQJziQd7Its2wRxKNtKpybYpm', '2019-11-13 22:13:00', '2020-05-26 18:51:57');
+(1, 'startyournode.web.space', 'IP', 'web_reseller01_startyournode', 'aXzaC5O2KjdtKmlWSJTE52MjSUrf7v2bPWCJU5qj2iljEy8JetSvuCWfeSEgiDYJhKgZhMzL9WzHQJziQd7Its2wRxKNtKpybYpm', '2019-11-13 22:13:00', '2020-05-26 18:51:57');
 
 -- --------------------------------------------------------
 
