@@ -1,15 +1,16 @@
 <?php
-
 ob_start();
 session_start();
+
+include_once './vendor/autoload.php';
+
+use Symfony\Component\Dotenv\Dotenv;
 
 $date = new DateTime(null, new DateTimeZone('Europe/Berlin'));
 $datetime = $date->format('Y-m-d H:i:s');
 
-/*
- * composer
- */
-include_once './vendor/autoload.php';
+$dotenv = new Dotenv();
+$dotenv->load(__DIR__.'/.env');
 
 /*
  * config

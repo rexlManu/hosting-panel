@@ -1,5 +1,9 @@
 <?php
 
+if(!array_key_exists('session_token', $_COOKIE)) {
+    $_COOKIE['session_token'] = null;
+}
+
 if($user->sessionExists($_COOKIE['session_token'])){
     /*
      * set static values
